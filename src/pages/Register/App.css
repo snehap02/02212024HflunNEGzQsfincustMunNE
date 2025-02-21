@@ -1,0 +1,27 @@
+.custom-select {
+    width: 18rem;
+    font-size: 14px;
+    line-height: 28px;
+    font-family: Poppins;
+  }
+  
+  .custom-select .ant-select-selector {
+    border: 1px solid #a3a3a3 !important;
+    border-radius: 9999px !important;
+    outline: none !important;
+  }
+  
+  .custom-select .ant-select-dropdown {
+    border-radius: 9999px !important;
+  }
+  
+  .custom-input {
+    border: 1px solid #a3a3a3;
+    border-radius: 9999px;
+    width: 18rem;
+    padding: 0.5rem;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: Poppins;
+    outline: 2px solid transparent;
+  }
