@@ -11,6 +11,16 @@ const BuyersProjects = () => {
   const [isLoginModal, setIsLoginModal] = useState(true);
   const navigate = useNavigate();
 
+    // Function to close modal
+    const handleModalClose = () => {
+      setIsModalOpen(false);
+    };
+  
+    const handleModalOpen = () => {
+      setIsModalOpen(true);
+    };
+  
+
   const handleModalToggle = () => {
     setIsModalOpen(!isModalOpen);
   };
@@ -114,9 +124,9 @@ const BuyersProjects = () => {
           ></div>
           <div className="relative z-50 bg-[#142e03] p-6 rounded-lg shadow-lg w-full max-w-md">
             {isLoginModal ? (
-              <Login switchToRegister={switchToRegister} /> // Pass the switch function as a prop
+              <Login switchToRegister={switchToRegister}  handleClose={handleModalClose}  /> // Pass the switch function as a prop
             ) : (
-              <Register switchToLogin={switchToLogin} /> // Pass the switch function as a prop
+              <Register switchToLogin={switchToLogin}  handleClose={handleModalClose}  /> // Pass the switch function as a prop
             )}
           </div>
         </div>

@@ -6,7 +6,7 @@ import Cookies from 'js-cookie';
 import {UAParser} from "ua-parser-js";
 import { Link } from "react-router-dom";
 
-const Register = ({ switchToLogin }) => {
+const Register = ({ switchToLogin, handleClose }) => {
   const [currentStep, setCurrentStep] = useState(1);
   const navigate = useNavigate();
   const [dropdowns, setDropdowns] = useState({
@@ -229,84 +229,92 @@ const Register = ({ switchToLogin }) => {
     </span>
   );
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
   
-  //   // Ensure validation only for the current step
-  //   if (currentStep === 5) {
-  //     const finalStepFields = getFieldsForStep(currentStep); // Get fields for Step 5
-  //     let stepErrors = {};
+    // Ensure validation only for the current step
+    if (currentStep === 5) {
+      const finalStepFields = getFieldsForStep(currentStep); // Get fields for Step 5
+      let stepErrors = {};
   
-  //     // Validate each field
-  //     finalStepFields.forEach((field) => {
-  //       const error = validateField(field, formData[field]);
-  //       if (error) {
-  //         stepErrors[field] = error; // Add error if validation fails
-  //       }
-  //     });
+      // Validate each field
+      finalStepFields.forEach((field) => {
+        const error = validateField(field, formData[field]);
+        if (error) {
+          stepErrors[field] = error; // Add error if validation fails
+        }
+      });
   
-  //     // If errors exist, show them and stop submission
-  //     if (Object.keys(stepErrors).length > 0) {
-  //       setErrors(stepErrors); // Display errors in the UI
-  //       console.error("Validation failed. Fix errors before submitting.");
-  //       return; // Prevent form submission
-  //     }
-  //   }
+      // If errors exist, show them and stop submission
+      if (Object.keys(stepErrors).length > 0) {
+        setErrors(stepErrors); // Display errors in the UI
+        console.error("Validation failed. Fix errors before submitting.");
+        return; // Prevent form submission
+      }
+    }
   
-  //   // Prepare data for submission
-  //   const data = {
-  //     role: formData.role.toLowerCase(),
-  //     email: formData.email,
-  //     password: formData.password,
-  //     firstName: formData.firstName,
-  //     middleName: formData.middleName || null,
-  //     lastName: formData.lastName,
-  //     phoneNumber: formData.phone,
-  //     address: formData.address1,
-  //     subAddress: formData.address2 || null,
-  //     userName: formData.username,
-  //     nickName: formData.nickname,
-  //     city: formData.city,
-  //     pinCode: formData.zip,
-  //     state: formData.state,
-  //     country: formData.country,
-  //   };
+    // Prepare data for submission
+    const data = {
+      role: formData.role.toLowerCase(),
+      email: formData.email,
+      password: formData.password,
+      firstName: formData.firstName,
+      middleName: formData.middleName || null,
+      lastName: formData.lastName,
+      phoneNumber: formData.phone,
+      address: formData.address1,
+      subAddress: formData.address2 || null,
+      userName: formData.username,
+      nickName: formData.nickname,
+      city: formData.city,
+      pinCode: formData.zip,
+      state: formData.state,
+      country: formData.country,
+    };
   
-  //   const portalMode = formData.role.toUpperCase();
-  //   localStorage.setItem('mode',portalMode);    
+    const portalMode = formData.role.toUpperCase();
+    localStorage.setItem('mode',portalMode);    
 
-  //   const parser = new UAParser();
-  //   const deviceInfo = parser.getResult();
+    const parser = new UAParser();
+    const deviceInfo = parser.getResult();
 
-  //   const linkedDevice = {
-  //     deviceName: `${deviceInfo.os.name} - ${deviceInfo.device.model || "Web"}`,
-  //     browser: deviceInfo.browser.name,
-  //     loginTime: new Date().toISOString(),
-  //   };
+    const linkedDevice = {
+      deviceName: `${deviceInfo.os.name} - ${deviceInfo.device.model || "Web"}`,
+      browser: deviceInfo.browser.name,
+      loginTime: new Date().toISOString(),
+    };
 
-  //   console.log("linkedDevice:",linkedDevice);
+    console.log("linkedDevice:",linkedDevice);
 
-  //   console.log("Submitting data:", data);
+    console.log("Submitting data:", data);
   
-  //   // Submit the data via API
-  //   try {
-  //     const response = await axios.post('http://localhost:5000/api/auth/register', { ...data, linkedDevice }, {
-  //       headers: { 'Content-Type': 'application/json' },
-  //     });
+    // Submit the data via API
+    try {
+      const response = await axios.post('http://localhost:5000/api/auth/register', { ...data, linkedDevice }, {
+        headers: { 'Content-Type': 'application/json' },
+      });
   
-  //     if (response.status === 201) {
-  //       console.log("Registration successful:", response.data);
-  //       Cookies.set("authToken", response.data.token, { expires: 7 }); // Set token in cookies
-  //       localStorage.setItem("userId",response.data.user.id);
-  //       window.location.reload(); // Reload the page
-  //       // navigate("/");
-  //     } else {
-  //       console.error("Registration failed:", response.data.message);
-  //     }
-  //   } catch (error) {
-  //     console.error("Error during registration:", error.response?.data || error.message);
-  //   }
-  // };
+      if (response.status === 201) {
+        console.log("Registration successful:", response.data);
+        Cookies.set("authToken", response.data.token, { expires: 7 }); // Set token in cookies
+        localStorage.setItem("userId",response.data.user.id);
+        window.location.reload(); // Reload the page
+        // navigate("/");
+      } else {
+        console.error("Registration failed:", response.data.message);
+      }
+    } catch (error) {
+      console.error("Error during registration:", error.response?.data || error.message);
+    }
+  };
+
+  const handleRegister = () => {
+    if (handleClose) handleClose(); // Close modal first
+    setTimeout(() => {
+      navigate("/maintenance");
+    }, 100);
+  };
+
   
   return (
     <div className="py-10 bg-[#142E03] rounded shadow text-white">
@@ -557,8 +565,9 @@ const Register = ({ switchToLogin }) => {
           <button
             className="bg-[#21872F] hover:bg-[#115019] text-white px-8 py-3 rounded name mt-5"
             // onClick={handleSubmit} 
+            onClick={handleRegister}
           >
-            <Link to="/maintenance">Register</Link>
+           <Link to="/maintenance">Register</Link>
           </button>
           
         )}

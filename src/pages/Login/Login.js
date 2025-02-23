@@ -11,7 +11,7 @@ import LoginWithMail from "./LoginWithMail";
 import LoginWithPhone from "./LoginWithPhone";
 // import firebase from '../../firebase-config';
 
-const Login = ({ switchToRegister }) => {
+const Login = ({ switchToRegister, handleClose }) => {
   // const [formData, setFormData] = useState({
   //   emailOrUsername: "",
   //   password: "",
@@ -29,6 +29,13 @@ const Login = ({ switchToRegister }) => {
   const recaptchaRef = useRef(null);
 
   const navigate = useNavigate();
+  const handleLogin = () => {
+    if (handleClose) handleClose(); // ✅ Close modal before redirect
+    setTimeout(() => {
+      navigate("/maintenance"); // Example redirect after login
+    }, 100);
+  };
+
   
 
   // const validate = () => {
@@ -192,10 +199,8 @@ const Login = ({ switchToRegister }) => {
 
       <div className="flex justify-between items-center mt-6">
         <button
-          className="text-[#36d64c] hover:underline text-sm"
-          onClick={() => setOtpMode(!otpMode)}
-        >
-          {otpMode ? "Login with Email/Password" : "Login with OTP"}
+          className="text-[#36d64c] hover:underline text-sm">
+          Login with OTP
         </button>
         <button
           className="text-[#36d64c] hover:underline text-sm"
@@ -208,7 +213,7 @@ const Login = ({ switchToRegister }) => {
       <div className="w-full text-center desc text-green-100">or login with</div>
 
       <div className="mt-10 flex gap-20 justify-center items-center">
-        <GoogleLogin />
+        <GoogleLogin/>
         <FacebookLogin />
       </div>
 

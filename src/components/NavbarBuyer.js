@@ -210,7 +210,7 @@ const NavbarBuyer = () => {
           />
 
           <button className="navText tracking-wider">
-            <Link to="/buyerjob">Jobs</Link>
+            <button>Jobs</button>
           </button>
           <div>Orders</div>
           {/* <BuySell /> */}
