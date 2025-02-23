@@ -29,6 +29,7 @@ const Login = ({ switchToRegister }) => {
   const recaptchaRef = useRef(null);
 
   const navigate = useNavigate();
+  
 
   // const validate = () => {
   //   const errors = {};
@@ -74,18 +75,18 @@ const Login = ({ switchToRegister }) => {
   //   return errors;
   // };
 
-  const setupRecaptcha = () => {
-    window.recaptchaVerifier = new RecaptchaVerifier(
-      'recaptcha-container',
-      {
-        size: 'invisible',
-        callback: () => {
-          console.log("reCAPTCHA verified.");
-        },
-      },
-      auth
-    );
-  };
+  // const setupRecaptcha = () => {
+  //   window.recaptchaVerifier = new RecaptchaVerifier(
+  //     'recaptcha-container',
+  //     {
+  //       size: 'invisible',
+  //       callback: () => {
+  //         console.log("reCAPTCHA verified.");
+  //       },
+  //     },
+  //     auth
+  //   );
+  // };
 
   // const handleSubmit = async (e) => {
   //   e.preventDefault();

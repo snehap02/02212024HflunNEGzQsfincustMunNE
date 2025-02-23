@@ -558,7 +558,7 @@ const Register = ({ switchToLogin }) => {
             className="bg-[#21872F] hover:bg-[#115019] text-white px-8 py-3 rounded name mt-5"
             // onClick={handleSubmit} 
           >
-            <Link to="/">Register</Link>
+            <Link to="/maintenance">Register</Link>
           </button>
           
         )}

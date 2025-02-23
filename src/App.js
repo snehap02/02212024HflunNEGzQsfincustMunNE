@@ -74,8 +74,7 @@ const AppWithMode = () => {
           {/* Dynamic Navbar */}
           {mode === "SELLER" ? <NavbarSeller /> : <NavbarBuyer />}
           <Outlet />
-          {/* <AskAI/> */}
-          <AIChatBot />
+          {/* <AIChatBot /> */}
           <Footer />
         </div>
       ),

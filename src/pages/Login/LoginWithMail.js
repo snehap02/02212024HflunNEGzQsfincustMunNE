@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Cookies from 'js-cookie';
+import { Link } from 'react-router-dom';
 
 const LoginWithMail = () => {
 
@@ -153,7 +154,7 @@ const LoginWithMail = () => {
                 disabled={isSubmitting}
                 className="w-full bg-[#12140c] text-white font-bold text-md name tracking-wider py-3 px-4 rounded-lg hover:bg-black focus:outline-none focus:ring focus:ring-black transition disabled:opacity-50"
             >
-                Login
+                <Link to="/maintenance">Login</Link>
             </button>
         </>
   )

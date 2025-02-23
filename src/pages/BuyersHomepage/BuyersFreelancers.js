@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-
+import { Link } from "react-router-dom";
 import Login from "../Login/Login";
 import Register from "../Register/Register";
 import Cookies from 'js-cookie';
@@ -167,10 +167,10 @@ const BuyersFreelancers = () => {
           {/* Cards Section */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-5">
             {filteredCards.map((card) => (
-              <div
+              <Link to="/profileSeller"
                 key={card.id}
                 className="bg-[#004321] p-4 rounded shadow-lg flex flex-col items-center text-center cursor-pointer"
-                onClick={handleCardClick}
+                // onClick={handleCardClick}
               >
                 <div className="first-section flex justify-between w-full gap-4">
                   <img
@@ -222,7 +222,7 @@ const BuyersFreelancers = () => {
                     </span>
                   ))}
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

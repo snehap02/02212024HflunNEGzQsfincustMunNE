@@ -31,7 +31,7 @@ const BuyersProjects = () => {
       handleModalToggle();
     } else {
       // Proceed with the action (e.g., open card details)
-      navigate("/gig");
+      navigate("/maintainance");
       console.log("Access granted! Proceed to card details.");
     }
   };
@@ -48,10 +48,10 @@ const BuyersProjects = () => {
           {/* Project Cards Section */}
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
             {projectDetails.map((item, index) => (
-              <div
+              <Link to="/gig"
                 key={index}
                 className="bg-[#004321] rounded-lg p-4 flex flex-col h-auto cursor-pointer hover:scale-105 transition-all"
-                onClick={handleCardClick} // Handle card click
+                // onClick={handleCardClick} // Handle card click
               >
                 {/* Project Image */}
                 <img
@@ -99,7 +99,7 @@ const BuyersProjects = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
