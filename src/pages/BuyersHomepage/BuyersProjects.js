@@ -50,7 +50,7 @@ const BuyersProjects = () => {
     <div className="min-h-screen text-white bg-webBg flex flex-col items-center px-4 md:px-8 lg:px-16 2xl:px-20 pb-20">
       <div className="pt-10 w-full relative">
         <img
-          src="../images/banner.svg"
+          src={`${process.env.PUBLIC_URL}/images/banner.svg`}
           alt="banner"
           className="object-cover w-full h-[200px] sm:h-[300px] lg:h-[400px] rounded-lg mt-10"
         />
