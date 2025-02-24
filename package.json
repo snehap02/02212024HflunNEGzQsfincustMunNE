@@ -1,5 +1,4 @@
 {
-  "homepage": "https://snehap02.github.io/02212024HflunNEGzQsfincustMunNE",
   "name": "fincust-new",
   "version": "0.1.0",
   "private": true,
@@ -56,3 +55,4 @@
     "tailwindcss": "^3.4.17"
   }
 }
+
