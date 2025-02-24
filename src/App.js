@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import { createHashRouter, RouterProvider, Outlet } from "react-router-dom";
 import Footer from "./components/Footer";
 import NavbarBuyer from "./components/NavbarBuyer";
 import NavbarSeller from "./components/NavbarSeller";
@@ -45,7 +45,7 @@ const AppWithMode = () => {
   const { mode } = useMode();
 
   // Define Routes
-  const appRouter = createBrowserRouter([
+  const appRouter = createHashRouter([
     {
       path: "/",
       element: (
@@ -53,15 +53,11 @@ const AppWithMode = () => {
           {/* Dynamic Navbar */}
           {mode === "SELLER" ? <NavbarSeller /> : <NavbarBuyer />}
           <Outlet />
-          {/* <AIChatBot /> */}
           <Footer />
         </div>
       ),
       children: [
-        {
-          path: "/",
-          element: mode === "BUYER" ? <BuyersProjects /> : <SellerDashboard />,
-        },
+        { path: "/", element: mode === "BUYER" ? <BuyersProjects /> : <SellerDashboard /> },
         { path: "/maintenance", element: <Maintenance /> },
         { path: "/buyersfreelancers", element: <BuyersFreelancers /> },
         { path: "/sellerdashboard", element: <SellerDashboard /> },
@@ -76,6 +72,7 @@ const AppWithMode = () => {
         { path: "/users", element: <Users /> },
         { path: "/ai", element: <AIChatBot /> },
         { path: "/sellerPOV", element: <BuyerProfileSellerPOV /> },
+        { path: "*", element: <Maintenance /> }, // Catch-all for 404 pages
       ],
     },
   ]);
