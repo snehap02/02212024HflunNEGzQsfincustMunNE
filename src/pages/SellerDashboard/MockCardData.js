@@ -618,7 +618,7 @@ export const cards = [
         level: 2,
         price: 65,
         country: "IN",
-        img: "/images/Person1.png",
+        img: "/images/person1.png",
         title:
           "I will design shopify store, shopify dropshipping store, shopify website",
         flag: "/images/Country.svg",
@@ -631,7 +631,7 @@ export const cards = [
         id: 2,
         name: "Nikhil Sharma",
         level: 1,
-        img: "/images/Person2.jpg",
+        img: "/images/person2.jpg",
         title: "I will design a unique minimalist timeless logo for your brand",
         price: 20,
         country: "IN",
@@ -647,7 +647,7 @@ export const cards = [
         level: 3,
         price: 50,
         title: "I will design figma website UI and landing page design",
-        img: "/images/Person3.jpg",
+        img: "/images/person3.jpg",
         flag: "/images/Country.svg",
         country: "IN",
         about:
