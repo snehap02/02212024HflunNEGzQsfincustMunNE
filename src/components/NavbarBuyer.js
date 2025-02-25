@@ -130,7 +130,7 @@ const NavbarBuyer = () => {
         <div className="logo">
           <Link to="/">
             <img
-              src={`${process.env.PUBLIC_URL}/images/logo.svg`}
+              src={`${process.env.PUBLIC_URL}/images/Logo.svg`}
               className="hover:cursor-pointer md:w-32 w-28"
               alt="logo"
             />
@@ -204,7 +204,7 @@ const NavbarBuyer = () => {
         {/* Desktop Menu */}
         <nav className="hidden 1424:flex items-center gap-8 text-navText font-medium text-sm leading-10">
           <img
-            src={`${process.env.PUBLIC_URL}/images/message.svg`}
+            src={`${process.env.PUBLIC_URL}/images/Message.svg`}
             className="hover:cursor-pointer w-6 sm:w-7"
             alt="message"
           />
