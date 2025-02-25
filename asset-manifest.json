@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/02212024HflunNEGzQsfincustMunNE/static/css/main.2113a13b.css",
-    "main.js": "/02212024HflunNEGzQsfincustMunNE/static/js/main.b1f63cce.js",
+    "main.css": "/02212024HflunNEGzQsfincustMunNE/static/css/main.736918e8.css",
+    "main.js": "/02212024HflunNEGzQsfincustMunNE/static/js/main.f2da3c88.js",
     "static/media/MacanPanWeb-Regular.ttf": "/02212024HflunNEGzQsfincustMunNE/static/media/MacanPanWeb-Regular.082a6d6abda824738774.ttf",
     "static/media/MacanPanWeb-Light.ttf": "/02212024HflunNEGzQsfincustMunNE/static/media/MacanPanWeb-Light.c012f8ef17c8613f6ee5.ttf",
     "static/media/MacanPanWeb-Medium.ttf": "/02212024HflunNEGzQsfincustMunNE/static/media/MacanPanWeb-Medium.44029f70ba57da1fe1ce.ttf",
     "static/media/MacanPanWeb-Semibold.ttf": "/02212024HflunNEGzQsfincustMunNE/static/media/MacanPanWeb-Semibold.69c9d787bde44ba28fdd.ttf",
     "static/media/Profile.svg": "/02212024HflunNEGzQsfincustMunNE/static/media/Profile.fdc71e3049d21e29272c6e02d663f596.svg",
     "index.html": "/02212024HflunNEGzQsfincustMunNE/index.html",
-    "main.2113a13b.css.map": "/02212024HflunNEGzQsfincustMunNE/static/css/main.2113a13b.css.map",
-    "main.b1f63cce.js.map": "/02212024HflunNEGzQsfincustMunNE/static/js/main.b1f63cce.js.map"
+    "main.736918e8.css.map": "/02212024HflunNEGzQsfincustMunNE/static/css/main.736918e8.css.map",
+    "main.f2da3c88.js.map": "/02212024HflunNEGzQsfincustMunNE/static/js/main.f2da3c88.js.map"
   },
   "entrypoints": [
-    "static/css/main.2113a13b.css",
-    "static/js/main.b1f63cce.js"
+    "static/css/main.736918e8.css",
+    "static/js/main.f2da3c88.js"
   ]
 }
