@@ -92,7 +92,7 @@ const Content = () => {
             Type Of Services
           </h2>
           <div className="video">
-            <video  src={`${process.env.PUBLIC_URL}/videos/video.mp4`}  className="w-96 mt-6"></video>
+            <img src={`${process.env.PUBLIC_URL}/images/video.png`} alt="video"  className="w-96 mt-6"/>
           </div>
         </div>
         <div className="projectWorkflow flex flex-col gap-2">

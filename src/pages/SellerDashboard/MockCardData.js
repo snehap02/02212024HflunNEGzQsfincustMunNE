@@ -611,3 +611,68 @@ export const conversations = [
   },
 ];
 
+export const cards = [
+  {
+        id: 1,
+        name: "Ankit Shrivastava",
+        level: 2,
+        price: 65,
+        country: "IN",
+        img: "/images/Person1.png",
+        title:
+          "I will design shopify store, shopify dropshipping store, shopify website",
+        flag: "/images/Country.svg",
+        about:
+          "I create high-converting, custom, and visually stunning Shopify stores tailored to your business needs, boosting revenue and success.",
+        skills: ["Graphic design", "SEO", "Web Development", "Web Design"],
+        rating: 4.5,
+      },
+      {
+        id: 2,
+        name: "Nikhil Sharma",
+        level: 1,
+        img: "/images/Person2.jpg",
+        title: "I will design a unique minimalist timeless logo for your brand",
+        price: 20,
+        country: "IN",
+        flag: "/images/Country.svg",
+        about:
+          "I specialize in creating clean, timeless logo designs and crafting comprehensive brand style guides.",
+        skills: ["Graphic design", "Logo Design", "3D Logo"],
+        rating: 4.7,
+      },
+      {
+        id: 3,
+        name: "Aanya",
+        level: 3,
+        price: 50,
+        title: "I will design figma website UI and landing page design",
+        img: "/images/Person3.jpg",
+        flag: "/images/Country.svg",
+        country: "IN",
+        about:
+          "I am a a UI/UX designer with 10+ years of experience creating impactful, reliable, and standout website designs.",
+        skills: ["Landing page", "Web Design", "Website UI/UX"],
+        rating: 4.2,
+      },
+      {
+        id: 4,
+        name: "Arvind Arora",
+        level: 3,
+        price: 25,
+        title: "I will do professional and engaging video editing for youtube",
+        img: "/images/Person4.jpg",
+        flag: "/images/Country.svg",
+        country: "IN",
+        about:
+          "I transform raw footage into visual masterpieces by leveraging my expertise in Adobe Premiere Pro and Adobe After Effects, combined with my natural storytelling ability.",
+        skills: [
+          "Video editing expertise",
+          "Documentary",
+          "Adobe After Effects",
+          "Social media",
+        ],
+        rating: 4.2,
+      },
+]
+

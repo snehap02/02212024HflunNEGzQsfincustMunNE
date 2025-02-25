@@ -34,7 +34,7 @@ const Footer = () => {
       </div>
 
       <div className="flex flex-col justify-center items-center gap-5 mb-10">
-        <img src="../images/logo.svg" alt="logo"/>
+        <img src={`${process.env.PUBLIC_URL}/images/Logo.svg`} alt="logo"/>
         <h1 className="text-white desc text-md">© 2024, FinCust For Freelancers</h1>
       </div>
     </div>
