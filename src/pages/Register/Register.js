@@ -320,7 +320,7 @@ const Register = ({ switchToLogin, handleClose }) => {
     <div className="py-10 bg-[#142E03] rounded shadow text-white">
       <div className="logo w-full flex flex-col justify-center items-center mb-10 -mt-10">
         <img
-          src="../images/logo.svg"
+          src={`${process.env.PUBLIC_URL}/images/logo.svg`}
           className="hover:cursor-pointer md:w-44 w-28"
           alt="logo"
         />

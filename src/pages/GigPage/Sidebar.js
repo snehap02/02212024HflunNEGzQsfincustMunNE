@@ -49,7 +49,7 @@ const Sidebar = () => {
         <div className="titleAndPhoto flex justify-around items-center gap-2">
           <div>
             <img
-              src="../images/DP.svg"
+              src={`${process.env.PUBLIC_URL}/images/DP.svg`}
               alt="profile-photo"
               className="w-28 flex-start"
             />
@@ -59,7 +59,7 @@ const Sidebar = () => {
               <h1 className="text-2xl name text-limeGreen">
                 Debarun Purkayastha
               </h1>
-              <img src="../images/verified.svg" alt="verify" />
+              <img src={`${process.env.PUBLIC_URL}/images/verified.svg`} alt="verify" />
             </div>
 
             <h1 className="name text-[13px] 2xl:text-[16px] bg-[#011E17] text-[#DAFF99] px-2 py-1 rounded-lg w-20 text-center">
@@ -67,7 +67,7 @@ const Sidebar = () => {
             </h1>
             <div className="flex gap-3">
               <div className="flex gap-2">
-                <img src="../images/star.svg" alt="" className="w-4" />
+                <img src={`${process.env.PUBLIC_URL}/images/star.svg`} alt="" className="w-4" />
                 <h1 className="text-lg name text-blueGreen">( 4.8 )</h1>
               </div>
               <span className="text-white text-xl -mt-[2px]">|</span>
@@ -92,11 +92,11 @@ const Sidebar = () => {
         </div>
         <div className="langAndLocation flex flex-col gap-4">
           <div className="flex gap-3">
-            <img src="../images/location.svg" alt="location" />
+            <img src={`${process.env.PUBLIC_URL}/images/location.svg`} alt="location" />
             <h1 className="text-[18px] name text-white">India</h1>
           </div>
           <div className="flex gap-3">
-            <img src="../images/language.svg" alt="language" className="ml-1" />
+            <img src={`${process.env.PUBLIC_URL}/images/language.svg`} alt="language" className="ml-1" />
             <h1 className="text-[18px] name text-white">English, Hindi</h1>
           </div>
         </div>
@@ -141,11 +141,11 @@ const Sidebar = () => {
               onClick={handlePlayClick}
               className="px-4 py-2 hover:scale-110 transition-all"
             >
-              <img src="../images/play.svg" alt="play" />
+              <img src={`${process.env.PUBLIC_URL}/images/play.svg`} alt="play" />
             </button>
           </div>
           <video
-            src="../videos/video.mp4"
+            src={`${process.env.PUBLIC_URL}/videos/video.mp4`} 
             className="w-full h-auto"
             muted
             loop
@@ -164,7 +164,7 @@ const Sidebar = () => {
               </button>
               {/* Video with controls */}
               <video
-                src="../videos/video.mp4"
+                src={`${process.env.PUBLIC_URL}/videos/video.mp4`} 
                 controls
                 autoPlay
                 className="w-full h-full"

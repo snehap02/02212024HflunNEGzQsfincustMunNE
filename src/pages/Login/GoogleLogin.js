@@ -25,7 +25,7 @@ const GoogleLogin = () => {
   // };
 
   return <button>
-    <img src="../images/google.svg" alt="google" className="w-12"/>
+    <img src={`${process.env.PUBLIC_URL}/images/google.svg`} alt="google" className="w-12"/>
   </button>;
 };
 

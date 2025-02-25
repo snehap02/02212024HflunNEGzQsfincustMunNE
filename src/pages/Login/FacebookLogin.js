@@ -44,7 +44,7 @@ const FacebookLogin = () => {
 
     return (
         <div>
-            <img src="../images/facebook.svg" alt="facebook" className="w-12" />
+            <img src={`${process.env.PUBLIC_URL}/images/facebook.svg`} alt="facebook" className="w-12" />
         </div>
     );
 };

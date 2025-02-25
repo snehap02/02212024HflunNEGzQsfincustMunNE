@@ -130,7 +130,7 @@ const NavbarBuyer = () => {
         <div className="logo">
           <Link to="/">
             <img
-              src="../images/logo.svg"
+              src={`${process.env.PUBLIC_URL}/images/logo.svg`}
               className="hover:cursor-pointer md:w-32 w-28"
               alt="logo"
             />
@@ -189,7 +189,7 @@ const NavbarBuyer = () => {
 
           {/* Search Button */}
           <button className="flex items-center justify-center h-10 w-10 m-1 hover:scale-105 transition-transform">
-            <img src="../images/search.svg" alt="search" />
+            <img src={`${process.env.PUBLIC_URL}/images/search.svg`} alt="search" />
           </button>
         </div>
 
@@ -204,7 +204,7 @@ const NavbarBuyer = () => {
         {/* Desktop Menu */}
         <nav className="hidden 1424:flex items-center gap-8 text-navText font-medium text-sm leading-10">
           <img
-            src="../images/message.svg"
+            src={`${process.env.PUBLIC_URL}/images/message.svg`}
             className="hover:cursor-pointer w-6 sm:w-7"
             alt="message"
           />
@@ -229,7 +229,7 @@ const NavbarBuyer = () => {
               // ref={notificationDropdownRef}
             >
               <img
-                src="../images/NotificationBell.svg"
+                src={`${process.env.PUBLIC_URL}/images/NotificationBell.svg`}
                 className="hover:cursor-pointer w-6"
                 alt="notification"
               />

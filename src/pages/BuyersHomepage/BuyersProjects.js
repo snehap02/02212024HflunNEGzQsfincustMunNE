@@ -65,7 +65,7 @@ const BuyersProjects = () => {
               >
                 {/* Project Image */}
                 <img
-                  src={item.img}
+                  src={`${process.env.PUBLIC_URL}${item.img}`}
                   alt="project"
                   className="object-cover w-full h-48 rounded-t-lg"
                 />
@@ -79,7 +79,7 @@ const BuyersProjects = () => {
                   <div className="flex items-center justify-between mt-2">
                     <div className="flex items-center gap-3">
                       <img
-                        src={item.person}
+                        src={`${process.env.PUBLIC_URL}${item.person}`}
                         alt="person"
                         className="w-8 h-8 rounded-full"
                       />
@@ -93,7 +93,7 @@ const BuyersProjects = () => {
                   <div className="flex items-center justify-between mt-4">
                     <div className="flex items-center gap-3">
                       <img
-                        src={item.delivery}
+                        src={`${process.env.PUBLIC_URL}${item.delivery}`}
                         alt="delivery"
                         className="w-5 h-5"
                       />

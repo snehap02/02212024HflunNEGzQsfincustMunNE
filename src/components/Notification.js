@@ -29,7 +29,7 @@ const Notification = ({ notifications = [] }) => {
         ) : (
           <div className="text-[#83b18a] text-opacity-70 w-full flex flex-col justify-center items-center mt-6 max-h-52">
             <img
-              src="../images/notification.svg"
+              src={`${process.env.PUBLIC_URL}/images/notification.svg`}
               alt="notification"
               className="w-12"
             />

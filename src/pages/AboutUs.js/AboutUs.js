@@ -21,14 +21,14 @@ const AboutUs = () => {
           the power of freelance work with Fincust.
         </p>
       </div>
-      <h1 className="text-2xl text-center font-sourcesans desc text-yellow-50 md:text-3xl mt-20 md:mt-32">
+      <h1 className="text-2xl text-center font-sourcesans desc text-yellow-50 md:text-3xl mt-20 md:mt-20">
         From the Founders:
       </h1>
       <div className="cards flex flex-col justify-center items-center lg:justify-around pt-10 gap-6 sm:px-10 md:px-28 lg:px-16 text-white">
         <div className="kunals-card rounded-xl flex flex-col lg:gap-20 lg:flex-row justify-center items-center xl:gap-64">
           <div className="px-2 py-10 text-center">
             <img
-              src="../images/me.jpg"
+              src={`${process.env.PUBLIC_URL}/images/me.jpg`}
               className="w-96 hover:scale-105 transition duration-500 h-96 object-cover" 
               alt=""
             />
@@ -49,11 +49,11 @@ const AboutUs = () => {
 
         <div className="debaruns-card desc rounded-xl flex flex-col lg:gap-20 lg:flex-row justify-center items-center xl:gap-64">
           <div className="px-2 py-10 text-center lg:hidden">
-            <img
-              src="../images/deburn1.jpg"
+            {/* <img
+              src={`${process.env.PUBLIC_URL}/images/deburn1.jpg`}
               className="w-96 hover:scale-105 transition duration-500"
-              alt=""
-            />
+              alt="debarun"
+            /> */}
             <h1 className="font-sourcesans text-2xl pt-4">
               Debarun Purkayastha
             </h1>
@@ -74,7 +74,7 @@ const AboutUs = () => {
           </div>
           <div className="px-2 py-10 text-center lg:flex hidden lg:flex-col">
             <img
-              src="../images/deburn1.jpg"
+              src={`${process.env.PUBLIC_URL}/images/deburn1.jpg`}
               className="w-96 hover:scale-105 transition duration-500"
               alt=""
             />

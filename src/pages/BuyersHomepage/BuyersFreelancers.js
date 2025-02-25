@@ -24,10 +24,10 @@ const BuyersFreelancers = () => {
       level: 2,
       price: 65,
       country: "IN",
-      img: "../images/Person1.png",
+      img: "/images/Person1.png",
       title:
         "I will design shopify store, shopify dropshipping store, shopify website",
-      flag: "../images/Country.svg",
+      flag: "/images/Country.svg",
       about:
         "I create high-converting, custom, and visually stunning Shopify stores tailored to your business needs, boosting revenue and success.",
       skills: ["Graphic design", "SEO", "Web Development", "Web Design"],
@@ -37,11 +37,11 @@ const BuyersFreelancers = () => {
       id: 2,
       name: "Nikhil Sharma",
       level: 1,
-      img: "../images/Person2.jpg",
+      img: "/images/Person2.jpg",
       title: "I will design a unique minimalist timeless logo for your brand",
       price: 20,
       country: "IN",
-      flag: "../images/Country.svg",
+      flag: "/images/Country.svg",
       about:
         "I specialize in creating clean, timeless logo designs and crafting comprehensive brand style guides.",
       skills: ["Graphic design", "Logo Design", "3D Logo"],
@@ -53,8 +53,8 @@ const BuyersFreelancers = () => {
       level: 3,
       price: 50,
       title: "I will design figma website UI and landing page design",
-      img: "../images/Person3.jpg",
-      flag: "../images/Country.svg",
+      img: "/images/Person3.jpg",
+      flag: "/images/Country.svg",
       country: "IN",
       about:
         "I am a a UI/UX designer with 10+ years of experience creating impactful, reliable, and standout website designs.",
@@ -67,8 +67,8 @@ const BuyersFreelancers = () => {
       level: 3,
       price: 25,
       title: "I will do professional and engaging video editing for youtube",
-      img: "../images/Person4.jpg",
-      flag: "../images/Country.svg",
+      img: "/images/Person4.jpg",
+      flag: "/images/Country.svg",
       country: "IN",
       about:
         "I transform raw footage into visual masterpieces by leveraging my expertise in Adobe Premiere Pro and Adobe After Effects, combined with my natural storytelling ability.",
@@ -130,14 +130,14 @@ const BuyersFreelancers = () => {
     <div className="min-h-screen text-white bg-webBg flex flex-col items-center w-full px-4 md:px-8 lg:px-16 2xl:px-20 pb-20">
       <div className="pt-10 w-full">
         <img
-          src="../images/banner.svg"
+          src={`${process.env.PUBLIC_URL}/images/banner.svg`}
           alt="banner"
           className="object-cover h-[200px] sm:h-[300px] lg:h-[400px] w-full rounded-lg mt-10"
         />
         <div className="flex flex-col gap-6 mt-10 w-full">
           {/* Filters Section */}
           <div className="flex flex-wrap gap-4 items-center name">
-            <img src="../images/filter.svg" alt="filter" />
+            <img src={`${process.env.PUBLIC_URL}/images/filter.svg`} alt="filter" />
             <CustomDropdown
               label="Seller Level"
               options={["1", "2", "3"]}
@@ -174,7 +174,7 @@ const BuyersFreelancers = () => {
               >
                 <div className="first-section flex justify-between w-full gap-4">
                   <img
-                    src={card.img}
+                    src={`${process.env.PUBLIC_URL}${card.img}`}
                     alt="person1Img"
                     className="w-[100px] h-[140px] 2xl:w-[150px] 2xl:h-[150px] rounded-lg object-cover"
                   />
@@ -188,7 +188,7 @@ const BuyersFreelancers = () => {
                         </h1>
                         <div className="flex gap-2 items-center">
                           <p className="name text-[13px] 2xl:text-[15px]">{card.country}</p>
-                          <img src={card.flag} alt="country" />
+                          <img src={`${process.env.PUBLIC_URL}${card.flag}`} alt="country" />
                         </div>
                       </div>
                       <div className="flex justify-between items-center">
@@ -196,7 +196,7 @@ const BuyersFreelancers = () => {
                           ${card.price}
                         </h1>
                         <div className="flex gap-2 items-center">
-                          <img src="../images/star.svg" alt="star" />
+                          <img src={`${process.env.PUBLIC_URL}/images/star.svg`} alt="star" />
                           <p className="name text-[18px]">{card.rating}</p>
                         </div>
                       </div>
@@ -280,9 +280,9 @@ const CustomDropdown = ({ label, options, filterType, handleFilterChange }) => {
         {selected || label}
         <span className="ml-2">
           {isOpen ? (
-            <img src="../images/UpArrow.svg" alt="" />
+            <img src={`${process.env.PUBLIC_URL}/images/UpArrow.svg`} alt="" />
           ) : (
-            <img src="../images/downArrow.svg" alt="" />
+            <img src={`${process.env.PUBLIC_URL}/images/downArrow.svg`} alt="" />
           )}
         </span>
       </button>

@@ -32,31 +32,31 @@ export const data = [
 export const finalImg = [
   {
     id: 1,
-    img: "../images/GigOV1.svg",
+    img: "/images/GigOV1.svg",
   },
   {
     id: 2,
-    img: "../images/GigOV2.svg",
+    img: "/images/GigOV2.svg",
   },
   {
     id: 3,
-    img: "../images/GigOV3.svg",
+    img: "/images/GigOV3.svg",
   },
   {
     id: 4,
-    img: "../images/GigOV4.svg",
+    img: "/images/GigOV4.svg",
   },
   {
     id: 5,
-    img: "../images/GigOV5.svg",
+    img: "/images/GigOV5.svg",
   },
   {
     id: 6,
-    img: "../images/GigOV6.svg",
+    img: "/images/GigOV6.svg",
   },
   {
     id: 7,
-    img: "../images/GigOV7.svg",
+    img: "/images/GigOV7.svg",
   },
 ];
 
@@ -197,48 +197,48 @@ export const settingsTab = [
 export const projectDetails = [
   {
     id: 1,
-    img: "../images/card1.jpg",
+    img: "/images/card1.jpg",
     title:
       "I will design shopify store, shopify dropshipping store, shopify website",
     name: "Ankit Shrivastava",
     price: "$65",
     level: "Level 2",
     deliveryTime: "2-Day delivery",
-    person: "../images/person1.png",
-    delivery: "../images/time.svg",
+    person: "/images/person1.png",
+    delivery: "/images/time.svg",
   },
   {
     id: 2,
-    img: "../images/card2.jpg",
+    img: "/images/card2.jpg",
     title: "I will design a unique minimalist timeless logo for your brand",
     name: "Nikhil Sharma",
     price: "$20",
     level: "Level 1",
     deliveryTime: "2-Day delivery",
-    person: "../images/person2.jpg",
-    delivery: "../images/time.svg",
+    person: "/images/person2.jpg",
+    delivery: "/images/time.svg",
   },
   {
     id: 3,
-    img: "../images/card3.png",
+    img: "/images/card3.png",
     title: "I will design figma website UI and landing page design",
     name: "Aanya",
     price: "$50",
     level: "Level 2",
     deliveryTime: "3-Day delivery",
-    person: "../images/person3.jpg",
-    delivery: "../images/time.svg",
+    person: "/images/person3.jpg",
+    delivery: "/images/time.svg",
   },
   {
     id: 4,
-    img: "../images/card4.jpeg",
+    img: "/images/card4.jpeg",
     title: "I will do professional and engaging video editing for youtube",
     name: "Arvind Arora",
     price: "$25",
     level: "Level 3",
     deliveryTime: "3-Day delivery",
-    person: "../images/Person4.jpg",
-    delivery: "../images/time.svg",
+    person: "/images/Person4.jpg",
+    delivery: "/images/time.svg",
   },
 ];
 
