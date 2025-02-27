@@ -12,9 +12,9 @@ const Content = () => {
     <div>
       <div className="content pt-28 whole-container px-5 2xl:px-[20rem] 2xl:-ml-72 left-0 h-[96vh] overflow-y-scroll scrollbarNew flex flex-col gap-8">
         <div className="home flex items-center gap-3">
-          <Link to="/sellerdashboard">
+          <div>
             <img src={`${process.env.PUBLIC_URL}/images/home.svg`} alt="home" />
-          </Link>
+          </div>
           <img
             src={`${process.env.PUBLIC_URL}/images/nextArrow.svg`}
             alt="nextarrow"
