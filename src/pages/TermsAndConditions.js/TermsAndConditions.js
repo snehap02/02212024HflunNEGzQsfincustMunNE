@@ -14,10 +14,8 @@ const TermsAndConditions = () => {
         <div className="first-point">
           <h1 className="text-[22px] md:text-[26px] bigText text-white">1. Overview
           </h1>
-          <h2 className="text-[16px] name text-white mt-4 w-[80%]">
-            Fincust is a platform where freelancers sell online services
-            directly to buyers. We facilitate transactions but are not a party
-            to agreements between freelancers and buyers.
+          <h2 className="text-[16px] desc text-white mt-4 w-[80%]">
+          Fincust is your go-to freelance platform, connecting talented freelancers with clients who need quality services. Whether you’re looking to hire skilled professionals or showcase your talents, we provide a secure, user-friendly space to make collaborations happen. Our mission is to empower creativity and collaboration by bridging the gap between freelancers and businesses worldwide. Join us and discover the power of freelance work with Fincust.
           </h2>
         </div>
 
@@ -47,9 +45,8 @@ const TermsAndConditions = () => {
           </h1>
           <ul className="text-white desc list-disc px-10 md:px-16 mt-4">
             <li>Payments are processed securely via third-party systems.</li>
-            <li className="mt-2">
-              Fincust charges a service fee for transactions, which will be
-              displayed during checkout.
+            <li className="mt-2 w-[80%]">
+            However, we at Fincust charge the users (buyers or sellers) for service commission as agreed with the user from time to time based on the order, and will be clearly displayed in the front-end web application or <a href="/" className="name">Fincust.com</a> in the necessary work flow prior to their service agreement, and other such charges like subscription, add-on services and other services as features provided to the users as a platform for sellers and buyers of freelancing services or gigs, and we are not have in hidden charges in any work flow therein.
             </li>
             <li className="mt-2">
               Refunds or disputes are subject to our Refund Policy and
@@ -80,7 +77,7 @@ const TermsAndConditions = () => {
           <h1 className="text-[22px] md:text-[26px] bigText text-white">
             5. Limitation of Liability
           </h1>
-          <h2 className="text-[16px] name text-white mt-4 w-[80%]">
+          <h2 className="text-[16px] desc text-white mt-4 w-[80%]">
             Fincust is a facilitator and is not responsible for disputes,
             quality of services, or damages resulting from user interactions.
           </h2>
